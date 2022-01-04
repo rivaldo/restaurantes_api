@@ -7,7 +7,7 @@ class RestauranteViewSet(viewsets.ModelViewSet):
     """Recurso de restaurantes"""
     queryset = Restaurante.objects.all()
     serializer_class = RestauranteSerializer
-    http_method_names = ['get', 'post']
+    http_method_names = ['get', 'post', 'put', 'path', 'delete']
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
     search_fields = ['nome']
@@ -16,7 +16,7 @@ class PratoViewSet(viewsets.ModelViewSet):
     """Recurso de pratos de um restaurante"""
     queryset = Prato.objects.all()
     serializer_class = PratoSerializer
-    http_method_names = ['get', 'post']
+    http_method_names = ['get', 'post', 'put', 'path', 'delete']
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
 
