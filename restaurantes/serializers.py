@@ -10,3 +10,10 @@ class PratoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Prato
         fields = '__all__'
+
+
+class ListaPratosDeUmRestauranteSerializer(serializers.ModelSerializer):
+    restaurante_nome = serializers.ReadOnlyField(source='restaurantes.nome')
+    class Meta:
+        model = Prato
+        fields = '__all__'
