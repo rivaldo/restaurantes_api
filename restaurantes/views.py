@@ -24,6 +24,7 @@ class PratoViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
     filterset_fields = ['tag']
+    pagination_class=None
 
 class ListaPratosDeUmRestauranteView(generics.ListAPIView):
     """Listando pratos de um restaurante"""
@@ -31,6 +32,7 @@ class ListaPratosDeUmRestauranteView(generics.ListAPIView):
         queryset = Prato.objects.filter(restaurante_id=self.kwargs['pk'])
         return queryset
     serializer_class = ListaPratosDeUmRestauranteSerializer
+    pagination_class=None
 
 class ListandoTagsView(APIView):
     def get(self, request):
@@ -103,3 +105,4 @@ class ListandoTagsView(APIView):
         ]
         }
         return JsonResponse(tags, status=status.HTTP_200_OK)
+    pagination_class=None
