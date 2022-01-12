@@ -33,7 +33,7 @@
         "fields": {
             "nome": "Pizza Toscana",
             "tag": "Italiana",
-            "imagem": "images/img.jpeg",
+            "imagem": "img.jpeg",
             "descricao": "Mais uma tradição da Itália, a Toscana da Rede Leve Pizza com muita calabresa ralada e bacon vai levar um sabor diferenciado para sua mesa.",
             "restaurante": 1
         }
@@ -44,7 +44,7 @@
         "fields": {
             "nome": "Macarrão",
             "tag": "Massas",
-            "imagem": "images/img.jpeg",
+            "imagem": "img.jpeg",
             "descricao": "Carbonara, é uma receita tradicional italiana de massa. Acredita-se que tenha sido uma receita apreciada pelos preparadores de carvão vegetal (carbinai) dos montes apeninos, na região italiana da Úmbria.",
             "restaurante": 1
         }
@@ -55,7 +55,7 @@
         "fields": {
             "nome": "X Salada",
             "tag": "Americana",
-            "imagem": "images/img.jpeg",
+            "imagem": "img.jpeg",
             "descricao": "Sanduíche com hambúrguer e queijo acompanhado com salada.",
             "restaurante": 2
         }
@@ -66,7 +66,7 @@
         "fields": {
             "nome": "X Tudo",
             "tag": "Americana",
-            "imagem": "images/img.jpeg",
+            "imagem": "img.jpeg",
             "descricao": "Sanduíche com muita carne e tudo que tiver disponível na cozinha.",
             "restaurante": 2
         }
@@ -77,7 +77,7 @@
         "fields": {
             "nome": "Sushi",
             "tag": "Japonesa",
-            "imagem": "images/img.jpeg",
+            "imagem": "img.jpeg",
             "descricao": "Iguaria de origem japonesa, caracterizado por ser feito de arroz temperado, enrolado em peixe cru ou frutos do mar frescos, vegetais, frutas, ovos e algas.",
             "restaurante": 3
         }
@@ -88,7 +88,7 @@
         "fields": {
             "nome": "Temaki",
             "tag": "Japonesa",
-            "imagem": "images/img.jpeg",
+            "imagem": "img.jpeg",
             "descricao": "O clássico arroz japonês acompanhado de peixes, alga marinha ou verduras ganhou o paladar do brasileiro.",
             "restaurante": 3
         }
@@ -99,7 +99,7 @@
         "fields": {
             "nome": "Caldo",
             "tag": "Caldos",
-            "imagem": "images/img.jpeg",
+            "imagem": "img.jpeg",
             "descricao": "A sopa vai para o prato com pedaços de legumes, hortaliças ou carnes. Também pode entrar o arroz ou o macarrão,ingredientes que dão sustança.",
             "restaurante": 4
         }
@@ -110,7 +110,7 @@
         "fields": {
             "nome": "Feijoada Smith",
             "tag": "Mineira",
-            "imagem": "images/img.jpeg",
+            "imagem": "img.jpeg",
             "descricao": "A feijoada é um dos pratos típicos mais conhecidos e populares da culinária brasileira.",
             "restaurante": 4
         }
