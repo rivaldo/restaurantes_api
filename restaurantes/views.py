@@ -105,4 +105,3 @@ class ListandoTagsView(APIView):
         ]
         }
         return JsonResponse(tags, status=status.HTTP_200_OK)
-    pagination_class=None
