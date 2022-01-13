@@ -15,6 +15,7 @@ class RestauranteViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
     search_fields = ['nome']
+    pagination_class=None
 
 class PratoViewSet(viewsets.ModelViewSet):
     """Recurso de pratos de um restaurante"""
