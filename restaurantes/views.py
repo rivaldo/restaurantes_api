@@ -21,7 +21,7 @@ class PratoViewSet(viewsets.ModelViewSet):
     """Recurso de pratos de um restaurante"""
     queryset = Prato.objects.all()
     serializer_class = PratoSerializer
-    http_method_names = ['get', 'post', 'put', 'path', 'delete']
+    http_method_names = ['get', 'post', 'put', 'patch', 'delete']
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
     filterset_fields = ['tag']
