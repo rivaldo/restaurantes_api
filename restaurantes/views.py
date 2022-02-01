@@ -3,15 +3,23 @@ from drf_yasg.openapi import Response
 from rest_framework import generics, viewsets, filters
 from rest_framework.views import APIView
 from restaurantes.models import Restaurante, Prato
-from restaurantes.serializers import RestauranteSerializer, PratoSerializer, ListaPratosDeUmRestauranteSerializer
+from restaurantes.serializers import RestauranteSerializer, PratoSerializer, ListaPratosDeUmRestauranteSerializer, UserSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth.models import User
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    pagination_class=None
 
 class RestauranteViewSet(viewsets.ModelViewSet):
     """Recurso de restaurantes"""
+    permission_classes = (IsAuthenticated,)
     queryset = Restaurante.objects.all()
     serializer_class = RestauranteSerializer
-    http_method_names = ['get', 'post', 'put', 'path', 'delete']
+    http_method_names = ['get','post', 'put', 'path', 'delete']
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
     search_fields = ['nome']
@@ -19,9 +27,10 @@ class RestauranteViewSet(viewsets.ModelViewSet):
 
 class PratoViewSet(viewsets.ModelViewSet):
     """Recurso de pratos de um restaurante"""
+    permission_classes = (IsAuthenticated,)
     queryset = Prato.objects.all()
     serializer_class = PratoSerializer
-    http_method_names = ['get', 'post', 'put', 'patch', 'delete']
+    http_method_names = ['get','post', 'put', 'patch', 'delete']
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
     filterset_fields = ['tag']
@@ -29,13 +38,36 @@ class PratoViewSet(viewsets.ModelViewSet):
 
 class ListaPratosDeUmRestauranteView(generics.ListAPIView):
     """Listando pratos de um restaurante"""
+    permission_classes = (IsAuthenticated,)
     def get_queryset(self):
         queryset = Prato.objects.filter(restaurante_id=self.kwargs['pk'])
         return queryset
     serializer_class = ListaPratosDeUmRestauranteSerializer
     pagination_class=None
 
+class ListaRestaurantesView(generics.ListAPIView):
+    """Listando restaurante"""
+    def get_queryset(self):
+        queryset = Restaurante.objects.all()
+        return queryset
+    serializer_class = RestauranteSerializer
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
+    ordering_fields = ['nome']
+    search_fields = ['nome']
+
+class ListaPratosView(generics.ListAPIView):
+    """Listando restaurante"""
+    def get_queryset(self):
+        queryset = Prato.objects.all()
+        return queryset
+    serializer_class = PratoSerializer
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
+    ordering_fields = ['nome']
+    filterset_fields = ['tag']
+
+
 class ListandoTagsView(APIView):
+    permission_classes = (IsAuthenticated,)
     def get(self, request):
         tags = {
         "tags": [
