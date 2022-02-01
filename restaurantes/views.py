@@ -19,7 +19,6 @@ class RestauranteViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     queryset = Restaurante.objects.all()
     serializer_class = RestauranteSerializer
-    http_method_names = ['get','post', 'put', 'path', 'delete']
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
     search_fields = ['nome']
@@ -30,7 +29,6 @@ class PratoViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     queryset = Prato.objects.all()
     serializer_class = PratoSerializer
-    http_method_names = ['get','post', 'put', 'patch', 'delete']
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['nome']
     filterset_fields = ['tag']
@@ -38,12 +36,12 @@ class PratoViewSet(viewsets.ModelViewSet):
 
 class ListaPratosDeUmRestauranteView(generics.ListAPIView):
     """Listando pratos de um restaurante"""
-    permission_classes = (IsAuthenticated,)
     def get_queryset(self):
         queryset = Prato.objects.filter(restaurante_id=self.kwargs['pk'])
         return queryset
     serializer_class = ListaPratosDeUmRestauranteSerializer
     pagination_class=None
+    permission_classes = (IsAuthenticated,)
 
 class ListaRestaurantesView(generics.ListAPIView):
     """Listando restaurante"""
