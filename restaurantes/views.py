@@ -71,67 +71,67 @@ class ListandoTagsView(APIView):
         "tags": [
             {
             "value": "Italiana",
-            "color": "green"
+            "id": 1
             },
             {
             "value": "Japonesa",
-            "color": "red"
+            "id": 2
             },
             {
             "value": "Doces",
-            "color": "blue"
+            "id": 3
             },
             {
             "value": "Diet",
-            "color": "yellow"
+            "id": 4
             },
             {
             "value": "Massas",
-            "color": "indigo"
+            "id": 5
             },
             {
             "value": "Caldos",
-            "color": "orange"
+            "id": 6
             },
             {
             "value": "Light",
-            "color": "cyan"
+            "id": 7
             },
             {
             "value": "Vegetariana",
-            "color": "sky"
+            "id": 8
             },
             {
             "value": "Mexicana",
-            "color": "fuchsia"
+            "id": 9
             },
             {
             "value": "Francesa",
-            "color": "pink"
+            "id": 10
             },
             {
             "value": "Espanhola",
-            "color": "rose"
+            "id": 11
             },
             {
             "value": "Mineira",
-            "color": "teal"
+            "id": 12
             },
             {
             "value": "Baiana",
-            "color": "emerald"
+            "id": 13
             },
             {
             "value": "Molhos",
-            "color": "lime"
+            "id": 14
             },
             {
             "value": "Saladas",
-            "color": "amber"
+            "id": 15
             },
             {
             "value": "Americana",
-            "color": "purple"
+            "id": 16
             }
         ]
         }
