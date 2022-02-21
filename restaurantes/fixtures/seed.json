@@ -28,6 +28,48 @@
         }
     },
     {
+        "model": "restaurantes.restaurante",
+        "pk": 5,
+        "fields": {
+            "nome": "Lyllys Cafe"
+        }
+    },
+    {
+        "model": "restaurantes.restaurante",
+        "pk": 6,
+        "fields": {
+            "nome": "Sugiro Sushi"
+        }
+    },
+    {
+        "model": "restaurantes.restaurante",
+        "pk": 7,
+        "fields": {
+            "nome": "Sugiro Sushi"
+        }
+    },
+    {
+        "model": "restaurantes.restaurante",
+        "pk": 8,
+        "fields": {
+            "nome": "Cantina da escola"
+        }
+    },
+    {
+        "model": "restaurantes.restaurante",
+        "pk": 9,
+        "fields": {
+            "nome": "Cantina da escola"
+        }
+    },
+    {
+        "model": "restaurantes.restaurante",
+        "pk": 10,
+        "fields": {
+            "nome": "Lanchonete Agarikov"
+        }
+    },
+    {
         "model": "restaurantes.prato",
         "pk": 1,
         "fields": {

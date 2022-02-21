@@ -41,7 +41,6 @@ class ListaPratosDeUmRestauranteView(generics.ListAPIView):
         return queryset
     serializer_class = ListaPratosDeUmRestauranteSerializer
     pagination_class=None
-    permission_classes = (IsAuthenticated,)
 
 class ListaRestaurantesView(generics.ListAPIView):
     """Listando restaurante"""

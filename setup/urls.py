@@ -34,7 +34,7 @@ urlpatterns = [
    path('api/v1/restaurantes/', ListaRestaurantesView.as_view() ),
    path('api/v1/pratos/', ListaPratosView.as_view() ),
    path('api/v2/', include(router.urls) ),
-   path('api/v2/restaurantes/<int:pk>/pratos/', ListaPratosDeUmRestauranteView.as_view() ),
+   path('api/v1/restaurantes/<int:pk>/pratos/', ListaPratosDeUmRestauranteView.as_view() ),
    path('api/v2/tags/', ListandoTagsView.as_view() ),
    path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
