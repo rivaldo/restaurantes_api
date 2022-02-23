@@ -29,8 +29,8 @@ router.register('pratos', PratoViewSet, basename='Pratos')
 
 urlpatterns = [
    path('admin-api/', admin.site.urls),
-   path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-   path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+   # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+   # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
    path('api/v1/restaurantes/', ListaRestaurantesView.as_view() ),
    path('api/v1/pratos/', ListaPratosView.as_view() ),
    path('api/v2/', include(router.urls) ),
