@@ -16,7 +16,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class RestauranteViewSet(viewsets.ModelViewSet):
     """Recurso de restaurantes"""
-    permission_classes = (IsAuthenticated,)
     queryset = Restaurante.objects.all()
     serializer_class = RestauranteSerializer
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
@@ -26,7 +25,6 @@ class RestauranteViewSet(viewsets.ModelViewSet):
 
 class PratoViewSet(viewsets.ModelViewSet):
     """Recurso de pratos de um restaurante"""
-    permission_classes = (IsAuthenticated,)
     queryset = Prato.objects.all()
     serializer_class = PratoSerializer
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
@@ -64,7 +62,6 @@ class ListaPratosView(generics.ListAPIView):
 
 
 class ListandoTagsView(APIView):
-    permission_classes = (IsAuthenticated,)
     def get(self, request):
         tags = {
         "tags": [
